@@ -1,6 +1,6 @@
 # Memento Lens — Proactive Ambient Memory Engine
 
-> **Live Demo:** [https://memento-lens-demo.vercel.app](https://memento-lens-demo.vercel.app) *(Placeholder)*
+> **Live Demo:** [https://memento-lens-demo.vercel.app](https://memento-lens.vercel.app) *(Placeholder)*
 
 **Memento Lens** is a highly specialized, proactive AI-driven contextual memory offloading application designed for neurodiverse individuals (ADHD, early dementia, executive dysfunction). It directly intercepts prospective memory breakdown loops by replacing manual form-entry folders and static time alarms with rapid multi-modal capture and real-world environmental context synchronization.
 
