@@ -17,6 +17,22 @@
 
 ---
 
+## 📸 Demo
+
+### Memory Feed & Context Extraction
+![Full Interface](./screenshots/hero-feed.png)
+*Chronological memory feed with AI-extracted context badges — temporal, spatial, social, and activity tags derived automatically from voice or text input.*
+
+### Just-in-Time Ambient Nudge
+![Nudge Triggered](./screenshots/nudge-triggered.png)
+*When simulated context (Location: "Pharmacy") intersects with stored memory triggers, the nudge fires proactively — no alarms, no manual checking required.*
+
+### AI-Powered Summarization
+![Remember This](./screenshots/remember-this.png)
+*The "Remember This" portal reduces dense meeting notes or multi-step instructions into concise actionable bullet points with extracted context tags.*
+
+---
+
 ## 🚀 Environment Setup & Local Deployment
 
 ### Prerequisites
