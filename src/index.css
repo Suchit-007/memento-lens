@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+:root {
+  /* Core Colors mapping exactly to Anthropic Claude editorial specification */
+  --primary: #cc785c;
+  --primary-active: #a9583e;
+  --primary-disabled: #e6dfd8;
+  
+  --ink: #141413;
+  --body: #3d3d3a;
+  --body-strong: #252523;
+  --muted: #6c6a64;
+  --muted-soft: #8e8b82;
+  
+  --canvas: #faf9f5;
+  --surface-soft: #f5f0e8;
+  --surface-card: #efe9de;
+  --surface-cream-strong: #e8e0d2;
+  --surface-dark: #181715;
+  --surface-dark-elevated: #252320;
+  --surface-dark-soft: #1f1e1b;
+  
+  --on-primary: #ffffff;
+  --on-dark: #faf9f5;
+  --on-dark-soft: #a09d96;
+  
+  --hairline: #e6dfd8;
+  --hairline-soft: #ebe6df;
+  
+  --accent-teal: #5db8a6;
+  --accent-amber: #e8a55a;
+  --success: #5db872;
+  --warning: #d4a017;
+  --error: #c64545;
+
+  /* Tag colors mapped beautifully to muted warm tones */
+  --tag-where: rgba(204, 120, 92, 0.12);
+  --tag-where-border: rgba(204, 120, 92, 0.25);
+  --tag-where-text: #cc785c;
+
+  --tag-who: rgba(93, 184, 166, 0.12);
+  --tag-who-border: rgba(93, 184, 166, 0.25);
+  --tag-who-text: #419685;
+
+  --tag-activity: rgba(232, 165, 90, 0.12);
+  --tag-activity-border: rgba(232, 165, 90, 0.25);
+  --tag-activity-text: #d18838;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Anthropic subtle customized warm scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--hairline);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-soft);
+}
+
+/* Accessibility screen reader helper target */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Literary Display Fonts */
+.font-editorial-display {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.font-editorial-display-dark {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-weight: 400;
+  color: var(--on-dark);
+}
+
+.font-editorial-mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Anthropic tailored UI buttons */
+.btn-anthropic-primary {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 8px; /* Strict rounded.md rule */
+  padding: 12px 20px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-anthropic-primary:hover, .btn-anthropic-primary:active {
+  background-color: var(--primary-active);
+}
+
+.btn-anthropic-secondary {
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 8px;
+  padding: 12px 20px;
+  height: 40px;
+  border: 1px solid var(--hairline);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-anthropic-secondary:hover {
+  background-color: var(--surface-soft);
+}
+
+.btn-anthropic-secondary-dark {
+  background-color: var(--surface-dark-elevated);
+  color: var(--on-dark);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 8px;
+  padding: 12px 20px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-anthropic-secondary-dark:hover {
+  background-color: #312e2a;
+}
+
+.btn-anthropic-link {
+  background-color: transparent;
+  color: var(--primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.btn-anthropic-link:hover {
+  text-decoration: underline;
+}
+
+/* Micro animations */
+@keyframes fadeInScaleWarm {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spinLoaderWarm {
+  to { transform: rotate(360deg); }
+}
+
+.animate-fade-in {
+  animation: fadeInScaleWarm 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Radial spike helper element */
+.anthropic-spike {
+  display: inline-block;
+  color: var(--ink);
+}
+.anthropic-spike-dark {
+  display: inline-block;
+  color: var(--on-dark);
+}
+
+/* Ambient canvas background header aura */
+.app-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 400px;
+  background: 
+    radial-gradient(ellipse 60% 50% at 50% 0%, 
+      rgba(204, 120, 92, 0.10) 0%,
+      rgba(93, 184, 166, 0.05) 40%,
+      transparent 100%
+    );
+  pointer-events: none;
+  z-index: 0;
+  animation: gradient-shift 8s ease-in-out infinite alternate;
+}
+
+@keyframes gradient-shift {
+  0% { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.04); }
+}
+
+.app-container {
+  position: relative;
+  z-index: 1;
+}
+
