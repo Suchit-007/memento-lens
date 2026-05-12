@@ -6,7 +6,7 @@
 
 ---
 
-## 🌟 Core Must-Have MVP Features
+## 🌟 Core MVP Features
 
 1. **Quick Capture:** Instant one-tap voice note integration via the native browser **Web Speech API** capturing intentions locally in under 3 seconds.
 2. **AI Context Extraction:** Utilizes **Google Gemini 3 Flash** with structured JSON Schema enforcement to automatically derive multidimensional entity nodes: **What**, **When**, **Where**, **Who**, and **Activity Dependencies**.
